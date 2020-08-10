@@ -4,7 +4,7 @@ No início da matéria, vemos como as operações bitwise funcionam mais interna
 # Como fazer esse laboratório
 O retorno de cada função deverá ser substituído pelo menor número de operações possíveis para realizar aquele objetivo usando o subconjunto de operadores especificados no comentário acima de cada função.
 
-Pelo comentário também é possível ver quantas operações eu utilizei para resolver aquele objetivo. Isso deve ajudar àqueles que não conseguirem pensar em uma solução imediata.
+Pelo comentário também é possível ver quantas operações eu utilizei para resolver aquele objetivo. Isso deve ajudar aqueles que não conseguirem pensar em uma solução imediata.
 
 # Avaliação
 É importante ressaltar também que se não conseguirem resolver com o número máximo de operações especificadas, a avaliação daquela função será zerada.
