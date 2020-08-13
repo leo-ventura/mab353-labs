@@ -13,6 +13,12 @@ Além disso, cada função será avaliada baseada na explicação dos passos. N�
 
 Ah, detalhe: **quem conseguir resolver com menos operações do que o monitor, ganhará bônus**.
 
+# Instruções
+Para testar basta compilar e rodar.
+
+É possível fazer a compilação pela linha de comando com `gcc -m32 bits.c -o bits` ou usando o [Makefile](./Makefile).
+Rode do mesmo jeito que rode qualquer binário em C: `./bits`
+
 # FAQ
 1. O que conta como uma operação?
 Apenas o que realizar alguma conta ou modificação dos valores. Consequentemente, parênteses não contam como operações.
