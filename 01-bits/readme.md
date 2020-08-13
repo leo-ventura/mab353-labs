@@ -2,14 +2,14 @@
 No início da matéria, vemos como as operações bitwise funcionam mais internamente. Nesse primeiro desafio, buscamos implementar algumas ações comuns por meio de outros operadores (com foco em operadores bitwise).
 
 # Como fazer esse laboratório
-O retorno de cada função deverá ser substituído pelo menor número de operações possíveis para realizar aquele objetivo usando o subconjunto de operadores especificados no comentário acima de cada função.
+O `return -1` de cada função deverá ser substituído pelo menor número de operações possíveis para realizar aquele objetivo usando o subconjunto de operadores especificados no comentário acima de cada função.
 
 Pelo comentário também é possível ver quantas operações eu utilizei para resolver aquele objetivo. Isso deve ajudar aqueles que não conseguirem pensar em uma solução imediata.
 
 # Avaliação
 É importante ressaltar também que se não conseguirem resolver com o número máximo de operações especificadas, a avaliação daquela função será zerada.
 
-Além disso, cada função será avaliada baseada na explicação dos passos. Não adianta copiar código sem entender o que aconteceu e esperar que vá receber o ponto inteiro. Pelo contrário, **se não houver explicação do que foi feito ela também será zerada**.
+Além disso, cada função também será avaliada baseada na **explicação dos passos**. Não adianta copiar código sem entender o que aconteceu e esperar que vá receber o ponto inteiro. Pelo contrário, **se não houver explicação do que foi feito ela será zerada**.
 
 Ah, detalhe: **quem conseguir resolver com menos operações do que o monitor, ganhará bônus**.
 
@@ -17,7 +17,7 @@ Ah, detalhe: **quem conseguir resolver com menos operações do que o monitor, g
 Para testar basta compilar e rodar.
 
 É possível fazer a compilação pela linha de comando com `gcc -m32 bits.c -o bits` ou usando o [Makefile](./Makefile).
-Rode do mesmo jeito que rode qualquer binário em C: `./bits`
+Por fim, rode como qualquer executável: `./bits`
 
 # FAQ
 1. O que conta como uma operação?
