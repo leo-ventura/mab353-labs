@@ -33,7 +33,7 @@ Isso irá criar um diretório chamado `mab353-labs` no diretório em que você e
 Nele você encontrará os arquivos necessários para fazer os laboratórios.
 
 # Como fazer os desafios
-Em cada diretório existe um readme específico explicando como cada desafio deverá ser resolvido.
+Em cada diretório aqui presente (apenas 01-bits até agora, mas ainda irei publicar os outros, que já estão prontos) existe um readme específico explicando como cada desafio deverá ser resolvido.
 
 # Contato
 Qualquer dúvida em relação aos laboratórios poderá ser tirada no nosso grupo no Telegram ou conversando comigo no privado. Não hesite em mandar mensagem se estiver travado em algum dos desafios.
