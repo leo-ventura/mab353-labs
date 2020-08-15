@@ -23,4 +23,4 @@ Por fim, rode como qualquer executável: `./bits`
 1. O que conta como uma operação?
 Apenas o que realizar alguma conta ou modificação dos valores. Consequentemente, parênteses não contam como operações.
 
-Exemplo: `x + ((~x) & (x % 0x1))` tem 4 operações: +, ~, & e %.
+Exemplo: `x + ((~x) & (x & 0x1))` tem 4 operações: +, ~, 2 vezes &.
