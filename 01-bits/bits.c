@@ -147,7 +147,7 @@ int32_t negativo(int32_t x) {
 /*
  * Implementação do | usando bitwise
  *      Permitido:
- *          Operações: ~ & ^ | ! << >>
+ *          Operações: ~ & ^ ! << >>
  *
  *      Número máximo de operações: 7
  *      Monitor: 4
