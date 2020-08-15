@@ -24,3 +24,13 @@ Por fim, rode como qualquer executável: `./bits`
 Apenas o que realizar alguma conta ou modificação dos valores. Consequentemente, parênteses não contam como operações.
 
 Exemplo: `x + ((~x) & (x & 0x1))` tem 4 operações: +, ~, 2 vezes &.
+
+2. Pode atribuição?
+Sim, desde que seja atribuição a int32_t. Qualquer outra atribuição está proibida. Ou seja:
+```c
+int32_t flipped = ~x;   // válido
+uint32_t flipped = ~x;  // inválido
+```
+
+3. Pode if-else, for, while, etc?
+Não. Apenas operadores e atribuições são permitidas. Vale ressaltar também que não são obrigatórias atribuições, os resultados podem ser feitos em uma linha.
