@@ -364,7 +364,7 @@ int main() {
     teste(bitEmP(-4194305, 22), 0);
     teste(bitEmP(9, 3), 1);
     teste(bitEmP(16, 3), 0);
-    teste(bitEmP(24, 4), 0);
+    teste(bitEmP(24, 2), 0);
     teste(bitEmP(0x1 << 31, 31), 1);
     teste(bitEmP(-1073741825, 30), 0);
     teste(bitEmP(-1073741825, 31), 1);
