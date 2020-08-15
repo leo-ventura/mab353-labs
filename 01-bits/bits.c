@@ -11,6 +11,7 @@
  * for pedido no enunciado.
  *
  * Todas as operações permitidas serão especificadas em cada questão.
+ * Não está permitido o uso de if-else, for, while, switch, etc.
  *
  * Forma de avaliação:
  *      - Quantas operações o aluno utlizou para realizar a tarefa (se está dentro da quantidade aceitável)
@@ -39,7 +40,7 @@
 /*
  * Diferente sem !=
  *      Permitido:
- *          Operações bitwise: ~ & ^ | << >>
+ *          Operações bitwise: ~ & ^ | ! << >>
  *
  *      Número máximo de operações: 6
  *      Monitor: 3
