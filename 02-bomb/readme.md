@@ -21,3 +21,7 @@ Ou seja, para rodar o programa, use:
 ```bash
 ./bomb <primeira-senha> <segunda-senha> <terceira-senha> <quarta-senha>
 ```
+
+# Dúvidas
+Esse laboratório é relativamente mais difícil do que o anterior. Algumas partes podem ser dificeis de entender de primeira.
+Se você se sentir empacado em alguma parte, **não hesite em entrar em contato com o monitor pelo Telegram ou pelo Classroom**.
