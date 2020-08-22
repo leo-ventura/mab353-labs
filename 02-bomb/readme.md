@@ -10,6 +10,8 @@ gdb bomb
 ```
 Utilize todo seu conhecimento sobre GDB e como um binário é organizado na memória para resolver o desafio.
 
+OBS: não é preciso analisar a função `inicializa` (apesar dela poder ser útil).
+
 # Avaliação
 A avaliação será feita em cima do relatório. Será levado em conta o entendimento que os alunos demonstrarem sobre o assunto, a qualidade para transmitir a informação de forma simples, e organização.
 
