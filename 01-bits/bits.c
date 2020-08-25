@@ -170,7 +170,7 @@ int32_t bitwiseOr(int32_t x, int32_t y) {
  *      Permitido:
  *          Operações: << >> | ! & +
  *
- *      Número máximo de operações: 6
+ *      Número máximo de operações: 3
  *      Monitor: 3
  *
  *      Retorna x multiplicado por 6
