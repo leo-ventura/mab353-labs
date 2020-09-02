@@ -164,7 +164,7 @@ int32_t negativo(int32_t x) {
  *              11 | 1001 -> 1011
  */
 int32_t bitwiseOr(int32_t x, int32_t y) {
-    return -;
+    return x | y;
 }
 
 /*
