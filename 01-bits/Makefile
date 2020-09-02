@@ -2,7 +2,8 @@ CC = gcc
 CFLAGS = -m32
 
 all: bits.c
-	${CC} ${CFLAGS} bits.c -o bits
+	${CC} bits.c -o bits
+	./bits
 
 clean:
 	rm bits

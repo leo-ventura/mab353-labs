@@ -8,6 +8,8 @@
 *.log
 *.log.*
 *.sig
+01-bits/Makefile
+01-bits/bits
 
 pkg/
 src/
