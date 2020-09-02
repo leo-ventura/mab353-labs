@@ -144,7 +144,7 @@ int32_t ehPositivo(int32_t x) {
  *          negativo(42) -> -42
  */
 int32_t negativo(int32_t x) {
-    return -1;
+    return ~x + 1;
 }
 
 /*
@@ -164,7 +164,7 @@ int32_t negativo(int32_t x) {
  *              11 | 1001 -> 1011
  */
 int32_t bitwiseOr(int32_t x, int32_t y) {
-    return -1;
+    return -;
 }
 
 /*
