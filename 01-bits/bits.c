@@ -52,7 +52,8 @@
  *          ehDiferente(16, 8) -> 1
  */
 int32_t ehDiferente(int32_t x, int32_t y) {
-    return -1;
+   
+    return !(x ^ y) ^ (1);
 }
 
 /*
