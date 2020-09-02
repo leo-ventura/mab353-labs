@@ -211,7 +211,7 @@ int32_t mult6(int32_t x) {
  *
  */
 int32_t bitEmP(int32_t x, uint8_t p) {
-    return -1;
+    return (x >> p) & 1;
 }
 
 /*
