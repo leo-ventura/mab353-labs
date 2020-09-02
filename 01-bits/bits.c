@@ -71,7 +71,7 @@ int32_t ehDiferente(int32_t x, int32_t y) {
  *          ehZero(7) -> 0
  */
 int32_t ehZero(int32_t x) {
-    return -1;
+    return !(x & ~0) ;
 }
 
 /*
@@ -125,7 +125,7 @@ int32_t mod4(int32_t x) {
  *          ehPositivo(-343) -> 0
  */
 int32_t ehPositivo(int32_t x) {
-    return -1;
+    return !(x & 0b10000000000000000000000000000000);
 }
 
 /*
@@ -143,7 +143,10 @@ int32_t ehPositivo(int32_t x) {
  *          negativo(42) -> -42
  */
 int32_t negativo(int32_t x) {
-    return -1;
+
+/*     int32_t y = ehPositivo(x);
+
+    return (x | 0b10000000000000000000000000000000 ); */
 }
 
 /*
