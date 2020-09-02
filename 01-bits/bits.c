@@ -71,6 +71,7 @@ int32_t ehDiferente(int32_t x, int32_t y) {
  *          ehZero(7) -> 0
  */
 int32_t ehZero(int32_t x) {
+
     return -1;
 }
 
@@ -89,7 +90,7 @@ int32_t ehZero(int32_t x) {
  *          ehImpar(7) -> 1
  */
 int32_t ehImpar(int32_t x) {
-    return -1;
+    return (x & 1);
 }
 
 /*
@@ -107,7 +108,7 @@ int32_t ehImpar(int32_t x) {
  *          mod4(7) -> 3
  */
 int32_t mod4(int32_t x) {
-    return -1;
+    return x & 3;
 }
 
 /*
