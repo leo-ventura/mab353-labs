@@ -181,7 +181,7 @@ int32_t bitwiseOr(int32_t x, int32_t y) {
  *          mult6(36) -> 216
  */
 int32_t mult6(int32_t x) {
-    return -1;
+    return (x << 2) + x + x;
 }
 
 /*
@@ -237,7 +237,7 @@ int32_t bitEmP(int32_t x, uint8_t p) {
  *
  */
 int32_t byteEmP(int32_t x, uint8_t p) {
-    return -1;
+    return (x >> (p << 3)) & 0xFF;
 }
 
 /*
@@ -256,7 +256,7 @@ int32_t byteEmP(int32_t x, uint8_t p) {
  *
  */
 int32_t negacaoLogica(int32_t x) {
-    return -1;
+    return ((x >> 31) | ((~x + 1) >> 31)) + 1;
 }
 
 void teste(int32_t saida, int32_t esperado) {
