@@ -241,7 +241,7 @@ int32_t byteEmP(int32_t x, uint8_t p) {
 /*
  * Negação lógica sem !
  *      Permitido:
- *          Operações: << >> | & +
+ *          Operações: << >> | & + ~
  *
  *      Número máximo de operações: 9
  *      Monitor: 5
