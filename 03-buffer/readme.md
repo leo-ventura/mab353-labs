@@ -5,7 +5,7 @@ Nas últimas aulas, você aprendeu sobre uma vulnerabilidade conhecida como [Buf
 Assim como no laboratório anterior, a entrega será em forma de relatório contendo todo o passo a passo feito para a exploração da vulnerabilidade nos desafios. Vale lembrar que esse relatório deverá ser entregue até a data limite no Classroom. Não será aceita nenhuma outra forma de envio.
 
 # Como fazer esse laboratório
-Esse lab consiste de dois desafios.
+Esse lab consiste de três desafios.
 
 ## Antes de começar
 Para facilitar seu trabalho na hora de explorar o binário, desative o ASLR no seu sistema rodando, como root:
@@ -53,3 +53,10 @@ python exploit.py | ./buf2
 ```
 
 Claro, um `exploit.py` só com o conteúdo acima não irá funcionar, pois você ainda precisará adicionar os bytes pra escrever o buffer inteiro e chegar até onde o `EIP` da função que chama a `main` está localizado.
+
+## Terceiro desafio
+Nesse último desafio, [buf3](./buf3), mais uma vez temos um programa utilizando `gets()` indevidamente, mas, diferentemente do desafio anterior, você não terá nenhuma função para executar. Dessa vez, você deverá inserir *shellcode* na pilha e fazer seu programa executá-lo. Assim, se bem sucedido, você deverá conseguir acesso a uma shell.
+
+Novamente, destaque tudo que for importante durante a resolução do desafio no relatório.
+
+O shellcode a ser inserido para executar uma shell pode ser encontrado [aqui](http://shell-storm.org/shellcode/).
