@@ -36,7 +36,7 @@ Nesse desafio, encontrado em [buf2](./buf2), um pouco mais complexo, você dever
 ### Responda:
 1. Qual endereço do código morto?
 2. Qual o tamanho do buffer de leitura?
-3. Onde fica o ebp? E o `eip` de retorno da função que chama `main`?
+3. Para onde aponta o ebp? E o `eip` de retorno da função que chama `main`?
 4. Quantos bytes deve-se escrever até conseguir sobrescrever `eip`?
 5. Qual valor deverá receber ser colocado para que eip aponte agora para `codigo_morto`?
 6. Por que o programa não termina normalmente após ser explorado?
