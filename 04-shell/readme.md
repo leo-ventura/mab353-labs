@@ -14,7 +14,7 @@ mabshell> <comando>
 ```
 
 ## Comandos built-in
-Sua shell deverá ser capaz de reconhecer alguns comandos *built-in* como `quit`, `fg`, `bg`, `jobs` e `cd`.
+Sua shell deverá ser capaz de reconhecer alguns comandos *built-in* como `fg`, `bg`, `jobs` e `cd`.
 Implemente outros comandos *built-in* que considerar relevantes.
 
 Dica: você pode utilizar as funções de coordenação entre processos aprendidas em sala para mplementar essas funcionalidades.
