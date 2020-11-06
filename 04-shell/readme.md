@@ -48,6 +48,11 @@ Além disso, ao receber EOF (ctrl-d pela entrada padrão), pare a execução da 
 ## Simplificações
 Não é necessário implementar pipe (`|`) nem redirecionamento de IO (`>`, `<`). A cada interação com a shell será passada apenas um comando por vez, não será necessário implementar múltiplos comandos por linha (permitindo uso de `;`), nem de execução sequencial/condicional com `&&` e `||`.
 
+## Observações
+**Não** pode utilizar a função `system()` para executar um comando de shell.
+Por trás dos panos, `system(comando)` faz um `fork()` e executa `execl("/bin/sh", "sh", "-c", comando)`.
+Então você estaria executando o comando em outra shell que não é a sua.
+
 # Entrega do trabalho
 Todos os arquivos de desenvolvimento do trabalho deverão ser entregues num zip ou tarball (não pode rar). Deverá ser incluído um Makefile para a compilação do projeto. Além disso, o arquivo de relatório (em pdf) também deverá ser entregue. Ele poderá ser incluído dentro do zip ou ser enviado diretamente pelo Classroom, como um arquivo extra.
 Todos os arquivos deverão ser entregues pelo Classroom e só serão aceitos trabalhos enviados por lá.
