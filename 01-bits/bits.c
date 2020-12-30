@@ -11,6 +11,7 @@
  * for pedido no enunciado.
  *
  * Todas as operações permitidas serão especificadas em cada questão.
+ * Não está permitido o uso de if-else, for, while, switch, etc.
  *
  * Forma de avaliação:
  *      - Quantas operações o aluno utlizou para realizar a tarefa (se está dentro da quantidade aceitável)
@@ -143,7 +144,7 @@ int32_t bitwiseAnd(int32_t x, int32_t y) {
 
 /* Igual sem ==
  *      Permitido:
- *          Operações bitwise: ~ & ^ | << >>
+ *          Operações: ~ & ^ | << >> ! +
  *
  *      Número máximo de operações: 3
  *      Monitor: 2
