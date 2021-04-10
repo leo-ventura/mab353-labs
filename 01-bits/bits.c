@@ -4,26 +4,25 @@
  * A ideia do laboratório é mostrar ao aluno outras formas de fazer as operações
  * que ele já está acostumado a fazer, mas de formas diferentes.
  * Criamos esse desafio com o objetivo de fazê-lo pensar em diferentes formas de se
- * atingir o mesmo resultado. Num cenário real, saber quais instruções são melhor
- * otimizadas pelo compilador pode ajudar muito a perfomance de um programa.
+ * atingir o mesmo resultado. Se possível, tentando pensar em qual seria mais
+ * eficiente.
  *
  * O aluno deverá usar apenas um subset de operações de C para realizar o que
  * for pedido no enunciado.
  *
  * Todas as operações permitidas serão especificadas em cada questão.
- * Não está permitido o uso de if-else, for, while, switch, etc.
  *
  * Forma de avaliação:
- *      - Quantas operações o aluno utlizou para realizar a tarefa (se está dentro da quantidade aceitável)
- *      - Explicação do código -- deverá ser o mais claro possível,
- *          imaginando que qualquer pessoa sem conhecimento prévio da
- *          matéria consiga entender o que foi feito, em detalhes.
+ *      - Quantas operações o aluno utlizou para realizar a tarefa (dentro da quantidade aceitável)
+ *      - Explicação do código -- deverá ser o mais claro possível (como qualquer
+ *          código), imaginando que qualquer pessoa sem conhecimento prévio da
+ *          matéria consiga entender o que foi feito.
  *      - As resoluções com menos operações do que a do monitor terão bonificação.
  *
  * Assinatura:
  *      Aluno: <nome>
  *      DRE: <DRE>
- *      versão do GCC utilizada: XX.XX.XX
+ *      versão do GCC utilizada: XXXX
  *
  */
 
@@ -35,26 +34,10 @@
 #include <stdio.h>
 #include <stdint.h>
 
-/* Número não é zero
- *      Permitido:
- *          Operações: ~ & ^ | ! << >>
- *
- *      Número máximo de operações: 3
- *      Monitor: 2
- *
- *      Retorna 1 se x é diferente 0, retorna 0 caso contrário
- *
- *      Exemplo:
- *          naoEhZero(0) -> 0
- *          naoEhZero(7) -> 1
- */
-int32_t naoEhZero(int32_t x) {
-    return -1;
-}
 
 /* Número é par ou não
  *      Permitido:
- *          Operações: ~ & ^ | ! << >>
+ *          Operações: ~ & ^ | << >>
  *
  *      Número máximo de operações: 3
  *      Monitor: 2
@@ -86,23 +69,6 @@ int32_t ehPar(int32_t x) {
  *          mod8(10) -> 2
  */
 int32_t mod8(int32_t x) {
-    return -1;
-}
-
-/* Número positivo ou não
- *      Permitido:
- *          Operações: ~ & ^ | ! << >>
- *
- *      Número máximo de operações: 5
- *      Monitor: 2
- *
- *      Retorna 1 se número é positivo, 0 caso contrário
- *
- *      Exemplo:
- *          ehPositivo(878) -> 1
- *          ehPositivo(-343) -> 0
- */
-int32_t ehPositivo(int32_t x) {
     return -1;
 }
 
@@ -144,7 +110,7 @@ int32_t bitwiseAnd(int32_t x, int32_t y) {
 
 /* Igual sem ==
  *      Permitido:
- *          Operações: ~ & ^ | << >> ! +
+ *          Operações bitwise: ~ & ^ | << >>
  *
  *      Número máximo de operações: 3
  *      Monitor: 2
@@ -159,20 +125,21 @@ int32_t ehIgual(int32_t x, int32_t y) {
     return -1;
 }
 
-/*
- * Multiplicação por 7
+/* Limpa bit n
  *      Permitido:
- *          Operações: << >> | ! & + -
+ *          Operações: ~ & ^ | ! << >>
  *
  *      Número máximo de operações: 4
- *      Monitor: 2
+ *      Monitor: 3
  *
- *      Retorna x multiplicado por 7
+ *      Retorna o x com o bit n = 0,
+ *      n pode variar entre 0 e 31, do LSB ao MSB
  *
  *      Exemplo:
- *          mult7(7) -> 49
+ *          limpaBitN(3, 0) -> 2
+ *          limpaBitN(3, 1) -> 1
  */
-int32_t mult7(int32_t x) {
+int32_t limpaBitN(int32_t x, int8_t n) {
     return -1;
 }
 
@@ -233,9 +200,54 @@ int32_t byteEmP(int32_t x, uint8_t p) {
 }
 
 /*
+ * Seta byte na posição p do inteiro x como y
+ *      Permitido:
+ *          Operações: << >> | ~ ! &
+ *
+ *      Número máximo de operações: 7
+ *      Monitor: 5
+ *
+ *      Retorna x com o valor y no byte da posição p
+ *
+ *      p será um valor entre 0 e 3
+ *      0 retorna LSB
+ *      3 retorna MSB
+ *
+ *      Exemplo:
+ *          setaByteEmP(0x12345678, 0xFF, 0) -> 0x123456FF
+ *          setaByteEmP(0x12345678, 0xFF, 1) -> 0x1234FF78
+ *          setaByteEmP(0x12345678, 0xFF, 2) -> 0x12FF5678
+ *          setaByteEmP(0x12345678, 0xFF, 3) -> 0xFF345678
+ *
+ */
+int32_t setaByteEmP(int32_t x, int32_t y, uint8_t p) {
+    return -1;
+}
+
+/*
+ * Minimo
+ *      Permitido:
+ *          Operações: << >> | ^ < > ~ ! & -
+ *
+ *      Número máximo de operações: 15
+ *      Monitor: 5
+ *
+ *      Retorna o menor numero entre x e y
+ *
+ *      Exemplo:
+ *          minimo(10, 15) -> 10
+ *          minimo(-2, -1) -> -2
+ *          minimo(-1, 2) -> -1
+ *
+ */
+int32_t minimo(int32_t x, int32_t y) {
+    return -1;
+}
+
+/*
  * Negação lógica sem !
  *      Permitido:
- *          Operações: << >> | ~ & +
+ *          Operações: << >> | & + ~
  *
  *      Número máximo de operações: 15
  *      Monitor: 5
@@ -248,7 +260,7 @@ int32_t byteEmP(int32_t x, uint8_t p) {
  *
  */
 int32_t negacaoLogica(int32_t x) {
-    return -1;
+  return -1;
 }
 
 void teste(int32_t saida, int32_t esperado) {
@@ -265,16 +277,6 @@ void teste(int32_t saida, int32_t esperado) {
 
 int main() {
     puts(ANSI_COLOR_BLUE "Primeiro lab - bits" ANSI_COLOR_RESET);
-    puts("");
-
-    puts("Teste: ehZero");
-    teste(naoEhZero(0), 0);
-    teste(naoEhZero(1), 1);
-    teste(naoEhZero(1024), 1);
-    teste(naoEhZero(-1), 1);
-    teste(naoEhZero(-2), 1);
-    teste(naoEhZero(-2147483648), 1);
-    teste(naoEhZero(2147483647), 1);
     puts("");
 
     puts("Teste: ehPar");
@@ -307,16 +309,6 @@ int main() {
     teste(mod8(-2147483648), 0);
     puts("");
 
-    puts("Teste: ehPositivo");
-    teste(ehPositivo(-1), 0);
-    teste(ehPositivo(1), 1);
-    teste(ehPositivo(2037), 1);
-    teste(ehPositivo(-2037), 0);
-    teste(ehPositivo(-2147483648), 0);
-    teste(ehPositivo(-2147483648/2), 0);
-    teste(ehPositivo(2147483647), 1);
-    puts("");
-
     puts("Teste: negativo");
     teste(negativo(0), 0);
     teste(negativo(1), -1);
@@ -345,13 +337,13 @@ int main() {
     teste(ehIgual(2147483647,-2147483648), 0);
     puts("");
 
-    puts("Teste: mult7");
-    teste(mult7(1), 7);
-    teste(mult7(7), 49);
-    teste(mult7(3), 21);
-    teste(mult7(-1), -7);
-    teste(mult7(-306783378), -2147483646);
-    teste(mult7(306783378), 2147483646);
+    puts("Teste: limpaBitN");
+    teste(limpaBitN(1,0), 0);
+    teste(limpaBitN(0b1111,1), 0b1101);
+    teste(limpaBitN(15,3), 7);
+    teste(limpaBitN(-1,31), 2147483647);
+    teste(limpaBitN(-1,0), -2);
+    teste(limpaBitN(2147483647, 30), 1073741823);
     puts("");
 
     puts("Teste: bitEmP");
@@ -381,6 +373,27 @@ int main() {
     teste(byteEmP(0x321, 0), 0x21);        // retorna 0x21
     puts("");
 
+    puts("Teste: setaByteEmP");
+    teste(setaByteEmP(0x00, 0xFF, 0), 0x000000FF);
+    teste(setaByteEmP(0x00, 0xFF, 1), 0x0000FF00);
+    teste(setaByteEmP(0x00, 0xFF, 2), 0x00FF0000);
+    teste(setaByteEmP(0x00, 0xFF, 3), 0xFF000000);
+    teste(setaByteEmP(0x01234567, 0x33, 2), 0x01334567);
+    teste(setaByteEmP(0xdeadbeef, 0x00, 0), 0xdeadbe00);
+    teste(setaByteEmP(0xdeadbeef, 0x00, 1), 0xdead00ef);
+    puts("");
+
+    puts("Teste: minimo");
+    teste(minimo(0,1), 0);
+    teste(minimo(0,10), 0);
+    teste(minimo(1, 128), 1);
+    teste(minimo(-1, 0), -1);
+    teste(minimo(-1, -2), -2);
+    teste(minimo(2147483647, 2147483646), 2147483646);
+    teste(minimo(-2147483648, -2147483647), -2147483648);
+    teste(minimo(-2147483648, -1), -2147483648);
+    puts("");
+
     puts("Teste: negacaoLogica");
     teste(negacaoLogica(0), 1);
     teste(negacaoLogica(1), 0);
@@ -390,4 +403,5 @@ int main() {
     teste(negacaoLogica(2147483647), 0);
     teste(negacaoLogica(-2147483648), 0);
     puts("");
+
 }
