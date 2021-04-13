@@ -110,7 +110,7 @@ int32_t bitwiseAnd(int32_t x, int32_t y) {
 
 /* Igual sem ==
  *      Permitido:
- *          Operações bitwise: ~ & ^ | << >>
+ *          Operações: ~ & ^ | << >> !
  *
  *      Número máximo de operações: 3
  *      Monitor: 2
